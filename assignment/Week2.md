@@ -82,7 +82,7 @@
 
 ~~~sql
 # 진아의 SQL Query문 
-SELECT name type
+SELECT name. type
 FROM pokemon;
 WHERE type = Electric;
 ~~~
