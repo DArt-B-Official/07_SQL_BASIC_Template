@@ -94,27 +94,39 @@
 
 ## 문제 1
 
-> **🧚Q. 광윤이는 사용자 로그 데이터에서, 2021년에 접속한 사용자 수를  집계하려고 했습니다. 그는 여러 SQL 쿼리들을 실행해봤지만, 그 중 일부는 문법적으로 잘못되어 실행되지 않았습니다. 다음 보기 중 틀린 쿼리를 모두 골라보세요 (복수 선택 가능)**
+> **🧚Q. 광윤이 카페 주문 로그 데이터(order_log)를 분석하여, '오전(0~11시)'과 '오후(12~23시)'의 주문 건수를 집계하려고 합니다. 유나가 작성한 다음 SQL 쿼리 중 문법적으로 틀렸거나 의도한 결과가 나오지 않는 것을 모두 골라보세요. (복수 선택 가능)**
 
 ~~~sql
-1. SELECT COUNT(*)  
-   FROM user_log  
-   WHERE EXTRACT(YEAR FROM login_date) = 2021;
+1. SELECT 
+   IF(EXTRACT(HOUR FROM order_time) < 12, '오전', '오후') AS time_type,
+   COUNT(*)
+   FROM order_log
+   GROUP BY time_type;
 
-2. SELECT EXTRACT(YEAR FROM login_date), COUNT(*)  
-   FROM user_log  
-   GROUP BY EXTRACT(YEAR FROM login_date);
+2. SELECT 
+   DATETIME_TRUNC(order_time, HOUR) AS truncated_hour,
+   COUNT(*)
+   FROM order_log
+   WHERE order_time BETWEEN '2021-01-01' AND '2021-12-31'
+   GROUP BY order_time;
 
-3. SELECT COUNT(*)  
-   FROM user_log  
-   WHERE login_date = '2021';
+3. SELECT 
+   FORMAT_DATETIME(order_time, '%H') AS order_hour,
+   COUNT(*)
+   FROM order_log
+   GROUP BY 1;
 
-4. SELECT COUNT(*)  
-   FROM user_log  
-   WHERE login_date BETWEEN '2021-01-01' AND '2021-12-31';
+4. SELECT 
+    CASE 
+      WHEN EXTRACT(HOUR FROM order_time) BETWEEN 0 AND 11 THEN '오전'
+      ELSE '오후'
+    AS time_group,
+    COUNT(*)
+   FROM order_log
+   GROUP BY time_group;
 ~~~
 
-<!-- 틀린쿼리에 대한 오류의 원인도 같이 작성해주세요. 문제에서 제공된 login_data 컬럼은 DATE type의 데이터를 가지고 있다고 가정하시면 됩니다. -->
+<!-- 틀린쿼리에 대한 오류의 원인도 같이 작성해주세요. 문제에서 제공된 order_time 컬럼은 DATETIME type의 데이터를 가지고 있다고 가정합니다. -->
 
 ~~~
 여기에 답을 작성해주세요!
