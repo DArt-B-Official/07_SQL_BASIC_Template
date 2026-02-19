@@ -104,11 +104,11 @@
 
 ## 프로그래머스 문제 
 
-[https://school.programmers.co.kr/learn/courses/30/lessons/164673](https://school.programmers.co.kr/learn/courses/30/lessons/131533)
+https://school.programmers.co.kr/learn/courses/30/lessons/131533
 
 > 상품 별 오프라인 매출 구하기
 
-[https://school.programmers.co.kr/learn/courses/30/lessons/144854](https://school.programmers.co.kr/learn/courses/30/lessons/133027)
+https://school.programmers.co.kr/learn/courses/30/lessons/133027
 
 > 주문량이 많은 아이스크림들 조회하기
 
