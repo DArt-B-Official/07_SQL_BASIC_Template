@@ -131,15 +131,6 @@ WHERE CATEGORY = '인문'
   AND YEAR(PUBLISHED_DATE, 2021);
   
 오류 메시지 : Error: Number of arguments does not match for function YEAR
- 
-# 수정하고 난 이후 두 번째 풀이
-SELECT YEAR(PUBLISHED_DATE), BOOK_ID
-FROM BOOK
-WHERE CATEGORY = '인문'
-  AND PUBLISHED_DATE BETWEEN '2021-01-01' AND '2021-12-31'
-ORDER BY PUBLISHED_DATE;
-  
-오류 메시지 : Error: ORDER BY expression references column PUBLISHED_DATE which is neither grouped nor aggregated
 ~~~
 
 
