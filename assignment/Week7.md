@@ -92,13 +92,13 @@
 
 ## 프로그래머스 문제 
 
-https://school.programmers.co.kr/learn/courses/30/lessons/157343
+https://school.programmers.co.kr/learn/courses/30/lessons/131117
 
-> 특정 옵션이 포함된 자동차 리스트 구하기
+> 5월 식품들의 총매출 조회하기
 
-https://school.programmers.co.kr/learn/courses/30/lessons/59044
+https://school.programmers.co.kr/learn/courses/30/lessons/59045
 
-> 오랜 기간 보호한 동물(1) 
+> 보호소에서 중성화한 동물
 
 https://school.programmers.co.kr/learn/courses/30/lessons/59043
 
@@ -108,13 +108,13 @@ https://school.programmers.co.kr/learn/courses/30/lessons/59043
 
 ## LeetCode 문제
 
-https://leetcode.com/problems/combine-two-tables/description/
+https://leetcode.com/problems/customers-who-never-order/
 
-> 175. Combine Two Tables
+> 183. Customers Who Never Order
 
 https://leetcode.com/problems/list-the-products-ordered-in-a-period/
 
-> 1327. List the Products Ordered in a Period
+> 585. Investments in 2016
 
 
 
