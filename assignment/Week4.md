@@ -110,7 +110,7 @@
 >
 > 문제 링크 
 >
-> :  [https://school.programmers.co.kr/learn/courses/30/lessons/131535#](https://school.programmers.co.kr/learn/courses/30/lessons/144853)
+> :  https://school.programmers.co.kr/learn/courses/30/lessons/144853
 
 <!-- 문제를 풀기 위하여 로그인이  필요합니다. -->
 
