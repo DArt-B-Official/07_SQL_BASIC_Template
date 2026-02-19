@@ -104,13 +104,13 @@
 
 ## 프로그래머스 문제 
 
-https://school.programmers.co.kr/learn/courses/30/lessons/164673
+[https://school.programmers.co.kr/learn/courses/30/lessons/164673](https://school.programmers.co.kr/learn/courses/30/lessons/131533)
 
-> 조건에 부합하는 중고거래 댓글 조회하기 (JOIN)
+> 상품 별 오프라인 매출 구하기
 
-https://school.programmers.co.kr/learn/courses/30/lessons/144854
+[https://school.programmers.co.kr/learn/courses/30/lessons/144854](https://school.programmers.co.kr/learn/courses/30/lessons/133027)
 
-> 조건에 맞는 도서와 저자 리스트 출력하기 (JOIN)
+> 주문량이 많은 아이스크림들 조회하기
 
 <!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. --> 
 
