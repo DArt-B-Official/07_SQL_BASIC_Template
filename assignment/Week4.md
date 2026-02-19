@@ -104,13 +104,13 @@
 
 ## 프로그래머스 문제 
 
-> 조건에 맞는 회원 수 구하기 (SELECT, COUNT) 
+> 조건에 맞는 도서 리스트 출력하기
 >
 > **먼저 문제를 풀고 난 이후에 확인 문제를 확인해주세요**
 >
 > 문제 링크 
 >
-> :  https://school.programmers.co.kr/learn/courses/30/lessons/131535#
+> :  [https://school.programmers.co.kr/learn/courses/30/lessons/131535#](https://school.programmers.co.kr/learn/courses/30/lessons/144853)
 
 <!-- 문제를 풀기 위하여 로그인이  필요합니다. -->
 
@@ -123,22 +123,23 @@
 > **🧚Q. 프로그래머스 문제를 풀던 규서는 여러 번의 시행착오 끝에 결국 혼자 해결하기 어려워 오류 메시지를 공유하며 도움을 요청했습니다. 여러분들이 오류 메시지를 확인하고, 해당 SQL 쿼리에서 어떤 부분이 잘못되었는지 오류 메시지를 해석하고 찾아 설명해주세요.**
 
 ~~~sql
-# 조건에 맞는 회원 수 구하기 (SELECT, COUNT) 
+# 조건에 맞는 도서 리스트 출력하기
 # 규서의 SQL 첫 번째 풀이
-SELECT COUNT(AGE, JOINED)
-FROM USER_INFO
-WHERE AGE BETWEEN 20 AND 29
-  AND JOINED BETWEEN '2021-01-01' AND '2021-12-31';
+SELECT BOOK_ID, PUBLISHED_DATE
+FROM BOOK
+WHERE CATEGORY = '인문'
+  AND YEAR(PUBLISHED_DATE, 2021);
   
-오류 메시지 : Error: Number of arguments does not match for aggregate function COUNT
+오류 메시지 : Error: Number of arguments does not match for function YEAR
  
 # 수정하고 난 이후 두 번째 풀이
-SELECT AGE, COUNT(*)
-FROM USER_INFO
-WHERE AGE BETWEEN 20 AND 29
-  AND JOINED BETWEEN '2021-01-01' AND '2021-12-31';
+SELECT YEAR(PUBLISHED_DATE), BOOK_ID
+FROM BOOK
+WHERE CATEGORY = '인문'
+  AND PUBLISHED_DATE BETWEEN '2021-01-01' AND '2021-12-31'
+ORDER BY PUBLISHED_DATE;
   
-오류 메시지 : SELECT list expression references column AGE which is neither grouped nor aggregated
+오류 메시지 : Error: ORDER BY expression references column PUBLISHED_DATE which is neither grouped nor aggregated
 ~~~
 
 
